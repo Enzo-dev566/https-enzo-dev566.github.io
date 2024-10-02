@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box
+}
+/* Modo oscuro-Modo claro CSS */
+:root{
+    --background: #e1e6f8;
+    --background-responsive: #f8f8f8;
+    --header: #eaf2f6;
+    --header-responsive: #ffffff;
+    --menu-responsive-ba: #f4fcff;
+    --menu-responsive-button: #0a0c16;
+    --menu-responsive-a-hover: #cfd9dd;
+    --logo-navbar-p: #0a0c16;
+    --p: #333541;
+    --a-menu: #151a28;
+    --a-menu-hover: #1e22e7;
+    --contact-button: #0e111c;
+    --contact-button-hover: #1b2030;
+    --contact-button-text-hover: #dee2ee;
+    --tema-back: #cfdde9;
+    --tema-i: #2e343d;
+    --historia-h1: #001f7b;
+    --proyectos-h1: #0077ff;
+    --tecnologias-h1: #53e45d;
+    --contacto-h1: #ffb638;
+    --gmail-h2: #2269ee;
+    --icon-gmail: #33373e;
+    --a-gmail: #ff6f8e;
+    --hdr2-ba: #ebebeb;
+    --hdr2-a: #1d233a;
+    --hdr2-a-hover: #0077ff;
+    --hdr2-i: #1d233a;
+    --copirygth-p: #182130;
+}
+.darkmode{
+    transition: 0.5s ease;
+    --background: #040a18;
+    --background-responsive: #020611;
+    --header: #060a14;
+    --header-responsive: #060a14;
+    --menu-responsive-ba: #0a0f1a;
+    --menu-responsive-button: #dce2ff;
+    --menu-responsive-a-hover: #0e1421;
+    --logo-navbar-p: #dae0fa;
+    --p: #daddf0;
+    --a-menu: #dfe8ff;
+    --a-menu-hover: #2528f8;
+    --contact-button: #dfe8ff;
+    --contact-button-hover: #0080ff;
+    --tema-back: #131621;
+    --tema-i: #e8eaff;
+    --historia-h1: #e3e8f6;
+    --proyectos-h1: #0099ff;
+    --tecnologias-h1: #1ff990;
+    --contacto-h1: #ffb638;
+    --gmail-h2: #009dff;
+    --icon-gmail: #cdebff;
+    --a-gmail: #e71845;
+    --hdr2-ba: #050818;
+    --hdr2-a: #e6f6ff;
+    --hdr2-a-hover: #1137f6;
+    --hdr2-i: #e6f6ff;
+    --copirygth-p: #eff6ff;
+}
+/* Body CSS */
+body{
+    background: var(--background);
+    width: 100%;
+    height: 100%;
+    font-family: Poppins;
+    transition: 0.5s ease;
+}
+/* Header */
+header{
+    background: var(--header);
+    position: fixed;
+    width: 100%;
+    padding: 15px 20px;
+    transition: 0.5s ease;
+}
+.logo-responsive{
+    display: none;
+}
+.logo-responsive img{
+    width: 60px;
+}
+.logo-responsive img:last-child{
+    display: none;
+}
+.darkmode .logo-responsive img:first-child{
+    display: none;
+}
+.darkmode .logo-responsive img:last-child{
+    display: block;
+}
+.navbar{
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 60px;
+}
+.logo img:last-child{
+    display: none;
+}
+.darkmode .logo img:first-child{
+    display: none;
+}
+.darkmode .logo img:last-child{
+    display: block;
+}
+.menu-site{
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+.menu-site a{
+    color: var(--a-menu);
+    text-decoration: none;
+    padding: 15px;
+    margin: 5px;
+}
+.menu-site a:hover{
+    color: var(--a-menu-hover);
+    transition: 0.4s ease;
+}
+.menu-site-2{
+    align-items: center;
+    display: flex;
+    list-style: none;
+}
+#tema{
+    border: none;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--tema-back);
+    cursor: pointer;
+}
+#tema i{
+    color: var(--tema-i);
+    font-size: 1rem;
+}
+#tema i:last-child{
+    display: none;
+}
+.darkmode #tema i:first-child{
+    display: none;
+}
+.darkmode #tema i:last-child{
+    display: block;
+}
+.contacto-button{
+    color: var(--contact-button);
+    text-decoration: none;
+    padding: 10px 25px;
+    margin: 15px;
+    border-radius: 2rem;
+}
+.contacto-button:hover{
+    background: var(--contact-button-hover);
+    color: var(--contact-button-text-hover);
+    transition: 0.4s ease;
+}
+/* Menu Reponsive CSS */
+#open-menu, #exit-menu{
+    display: none;
+}
+/* Portada */
+.portada img{
+    width: 100%;
+}
+.portada img:last-child{
+    display: none;
+}
+.darkmode .portada img:first-child{
+    display: none;
+}
+.darkmode .portada img:last-child{
+    display: block;
+}
+/* Historia */
+.historia{
+    text-align: center;
+}
+.historia h1{
+    color: var(--historia-h1);
+    padding: 50px;
+    font-size: 2rem;
+    font-weight: 300;
+}
+.historia img{
+    border-radius: 15px;
+}
+.historia p{
+    color: var(--p);
+    font-weight: 500;
+    margin-inline: 300px;
+    font-size: 2.4rem;
+    padding: 20px;
+}
+/* Proyectos */
+.proyects{
+    text-align: center;
+}
+.proyects h1{
+    color: var(--proyectos-h1);
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 50px;
+}
+.proyects img{
+    border-radius: 2rem;
+}
+.proyects h2{
+    color: #1e22e7;
+    font-weight: 400;
+    padding: 20px;
+}
+/* Tecnologías */
+.tecnologias{
+    text-align: center;
+}
+.tecnologias h1{
+    font-size: 2rem;
+    color:var(--tecnologias-h1);
+    font-weight: 300;
+    padding: 50px;
+}
+.content-icons-tecnologias{
+    text-align: center;
+}
+.content-icons-tecnologias i{
+    font-size: 4.4rem;
+    padding: 40px;
+}
+/* Contacto */
+.contacto-content{
+    text-align: center;
+}
+.contacto-content h1{
+    color: var(--contacto-h1);
+    font-weight: 300;
+    font-size: 2rem;
+    padding: 50px;
+}
+.gmail{
+    display: grid;
+}
+.gmail h2{
+    color: var(--gmail-h2);
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding: 20px;
+}
+.gmail i{
+    font-size: 3rem;
+    padding: 15px;
+    color: var(--icon-gmail);
+}
+.gmail a{
+    color: var(--a-gmail);
+    text-decoration: none;
+    padding: 20px;
+}
+/* Header 2 */
+.hdr2{
+    background: var(--hdr2-ba);
+    padding: 20px;
+}
+.logo-hdr2 img{
+    width: 120px;
+}
+.content-copi{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.content-copi p{
+    color: var(--copirygth-p);
+    padding: 30px;
+}
+.logo-hdr2 img:last-child{
+    display: none;
+}
+.darkmode .logo-hdr2 img:first-child{
+    display: none;
+    left: 0;
+}
+.darkmode .logo-hdr2 img:last-child{
+    display: block;
+}
+.navbar-hdr2{
+    text-align: center;
+}
+.menu-hdr2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 30px;
+}
+.menu-hdr2 a{
+    color: var(--hdr2-a);
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px;
+    bottom: 50px;
+}
+.menu-hdr2 a:hover{
+    color: #0080ff;
+    transition: 0.4s ease;
+    font-weight: 300;
+}
+.menu-2-hdr2 i{
+    color: var(--hdr2-i);
+    padding: 10px;
+    font-size: 1.4rem;
+}
+.menu-2-hdr2 i:hover{
+    color: #1e22e7;
+    transition: 0.4s ease;
+}
+/* Responsive */
+@media screen and (max-width: 1500px) {
+    body{
+        background: var(--background-responsive);
+    }
+    /* Menu responsive */
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 20px;
+        background: var(--header-responsive);
+    }
+    .logo-responsive{
+        display: block;
+    }
+    #open-menu, #exit-menu{
+        display: block;
+        border: none;
+        background: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    #open-menu{
+        color: var(--menu-responsive-button);
+    }
+    #exit-menu{
+        color: #dc174c;
+    }
+    .navbar{
+        visibility: hidden;
+        display: grid;
+        flex-direction: row;
+        align-items: start;
+        position: absolute;
+        background: var(--menu-responsive-ba);
+        height: 100vh;
+        width: 270px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        padding: 15px;
+        gap: 3rem;
+        transition: right 4s ease;
+        padding-top: 30px;
+    }
+    .navbar.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-site{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem;
+    }
+    .menu-site a{
+        color: var(--a-menu);
+        margin: 10px;
+    }
+    .menu-site a:hover{
+        background: var(--menu-responsive-a-hover);
+        padding: 15px;
+        padding-right: 50px;
+        border-radius: 1rem;
+    }
+    /* Portada responsive */
+    .portada img{
+        padding-top: 90px;
+    }
+    /* Historia responsive */
+    .historia img{
+        border-radius: 0em;
+        width: 100%;
+    }
+    .historia p{
+        margin: 0;
+        font-size: 1.5rem;
+        padding: 20px;
+    }
+    .proyects img{
+        width: 100%;
+        border-radius: 0px;    
+    }
+    .content-icons-tecnologias i{
+        display: grid;
+    }
+    .logo-hdr2 img{
+        width: 60px;
+    }
+    .content-copi p{
+        font-size: 0.8rem;
+    }
+    .menu-hdr2 a{
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+}
